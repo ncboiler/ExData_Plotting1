@@ -25,7 +25,7 @@ png(filename = "plot3.png", width = 480, height = 480 )
 
 #plot the time series for sub_metering1 first
 plot(a, xaxt = "n", ylab = "Energy sub metering", xlab = "")
-axis(1, at= c(0, 1500, 2900), labels = c("Thursday", "Friday", "Saturday"))
+axis(1, at= c(0, 1500, 2900), labels = c("Thu", "Fri", "Sat"))
 
 #plot the time series for Sub_metering_2 
 lines(b, col = "red")

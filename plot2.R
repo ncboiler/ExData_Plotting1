@@ -17,6 +17,12 @@ meter$Global_active_power <- as.numeric(meter$Global_active_power)
 #turn the Global_active_power into a time series vector
 z <- ts(meter$Global_active_power)
 
+#set up the png file
+png(file = "plot2.png", width = 480, height = 480)
+
 #plot the graph without the x-axis tick marks
 plot(z, xaxt = "n", ylab = "Global Active Power (kilowatts)", xlab = "")
-axis(1, at= c(0, 1500, 2900), labels = c("Thursday", "Friday", "Saturday"))
+axis(1, at= c(0, 1500, 2900), labels = c("Thu", "Fri", "Sat"))
+
+#turn off device
+dev.off()
