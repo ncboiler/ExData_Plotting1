@@ -29,13 +29,13 @@ meter$Global_active_power <- as.numeric(meter$Global_active_power)
 z <- ts(meter$Global_active_power)
 #plot the graph without the x-axis tick marks
 plot(z, xaxt = "n", ylab = "Global Active Power", xlab = "")
-axis(1, at= c(0, 1500, 2900), labels = c("Thursday", "Friday", "Saturday"))
+axis(1, at= c(0, 1500, 2900), labels = c("Thu", "Fri", "Sat"))
 
 ###Plot the time series for voltage
 meter$Voltage <- as.numeric(meter$Voltage)
 volt <- ts(meter$Voltage)
 plot(volt, xaxt = "n", ylab = "Voltage", xlab = "datetime")
-axis(1, at= c(0, 1500, 2900), labels = c("Thursday", "Friday", "Saturday"))
+axis(1, at= c(0, 1500, 2900), labels = c("Thu", "Fri", "Sat"))
 
 ### add the energy sub metering graph####
 
@@ -50,7 +50,7 @@ b  <- ts(meter$Sub_metering_2)
 c  <- ts(meter$Sub_metering_3)
 
 plot(a, xaxt = "n", ylab = "Energy sub metering", xlab = "")
-axis(1, at= c(0, 1500, 2900), labels = c("Thursday", "Friday", "Saturday"))
+axis(1, at= c(0, 1500, 2900), labels = c("Thu", "Fri", "Sat"))
 
 #plot the time series for Sub_metering_2 
 lines(b, col = "red")
@@ -69,7 +69,7 @@ meter$Global_reactive_power <- as.numeric(meter$Global_reactive_power)
 x <- ts(meter$Global_reactive_power)
 #plot the graph without the x-axis tick marks
 plot(x, xaxt = "n", yaxt = "n",  ylab = "Global_reactive_power", xlab = "datetime")
-axis(1, at= c(0, 1500, 2900), labels = c("Thursday", "Friday", "Saturday"))
+axis(1, at= c(0, 1500, 2900), labels = c("Thu", "Fri", "Sat"))
 axis(2, at = c(0.0, 0.1, 0.2,0.3,0.4,0.5), labels = c(0.0, 0.1,0.2,0.3,0.4,0.5))
 
 dev.off()
